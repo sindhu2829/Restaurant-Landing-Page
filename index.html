@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="NutriEats - A health-focused restaurant offering delicious, nutritious meals. Explore our menu, take a virtual tour, and order ahead online.">
+    <meta name="keywords" content="Healthy Food, Restaurant, NutriEats, Nutrition, Virtual Tour, Order Online">
+    <meta name="author" content="Your Name">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriEats - Eat Healthy, Live Healthy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo-name">
+                <a href="#home">Nutri<span>Eats</span></a>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about-us">About Us</a></li>
+
+                    <li class="dropdown">
+                        <a href="#menu" class="dropbtn">Menu</a>
+                        <div class="dropdown-content">
+                            <a href="#breakfast">Breakfast</a>
+                            <a href="#lunch">Lunch</a>
+                            <a href="#dinner">Dinner</a>
+                        </div>
+                    <li><a href="#reservations">Reservations</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for meals, articles, or categories">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+                <a href="#menu" class="btn order-now">Order Now</a>
+            </div>
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-welcome-section">
+        <div class="hero-background">
+            <img src="restaurant.jpg" alt="Restaurant Interior" class="hero-image">
+            <img src="Healthy Dishes.jpg" alt="Healthy Dishes" class="hero-image">
+            <img src="Food Preparation.jpg" alt="Chef Preparing Food" class="hero-image">
+        </div>
+
+        <video autoplay muted loop class="background-video">
+            <source src="background.mp4" type="video/mp4">
+        </video>
+
+        <div class="hero-welcome-content">
+            <h1>WELCOME TO <span style="color: #ff6f61;" class="restaurant-name">NutriEats</span></h1>
+            <p>Experience the taste of health and wellness.</p>
+            <a href="#about-us" class="scroll-down-btn">Explore More</a>
+        </div>
+    </section>
+
+
+    <!-- About Us Section -->
+    <section id="about-us" class="about-us">
+        <div class="container">
+            <div class="image">
+                <img src="Nutrieats Dish.jpg" alt="Nutrieats Healthy Dish" class="dish-image">
+            </div>
+            <div class="content">
+                <h2>Welcome to NutriEats</h2>
+                <p>At Nutrieats, we blend nutrition and taste to create an unforgettable dining experience. Our
+                    philosophy is simple: healthy eating should never be boring. We craft every dish with passion
+                    and precision, using only the freshest, organic ingredients to nourish both your body and soul.
+                </p>
+                <p>From vegan delights to gluten-free treats, our diverse menu caters to all dietary preferences.
+                    Whether you're a fitness enthusiast or simply looking to enjoy a wholesome meal, Nutrieats is
+                    the perfect place for you.</p>
+                <button onclick="showMore()">Discover Our Story</button>
+            </div>
+        </div>
+        <div class="highlight-image">
+            <img src="Restaurant Interior.jpg" alt="Nutrieats Restaurant Interior" class="interior-image">
+        </div>
+    </section>
+
+
+
+    <!-- Interactive Menu Section -->
+    <section id="menu" class="menu-section">
+        <h2 class="section-title">Our Menu</h2>
+        <p class="section-subtitle">Indulge in our curated selection of wholesome and flavorful dishes. Select a
+            category to begin your culinary journey.</p>
+
+        <div class="menu-categories">
+            <button class="category-button active" data-category="all">All</button>
+            <button class="category-button" data-category="salads">Salads</button>
+            <button class="category-button" data-category="smoothies">Smoothies</button>
+            <button class="category-button" data-category="wraps">Wraps</button>
+            <button class="category-button" data-category="bowls">Bowls</button>
+            <button class="category-button" data-category="desserts">Desserts</button>
+            <button class="category-button" data-category="drinks">Drinks</button>
+            <!-- Additional categories can be added here -->
+        </div>
+
+        <div class="menu-items">
+            <!-- Salads -->
+            <div class="menu-item" data-category="salads">
+                <div class="item-image">
+                    <img src="Healthy Salad.jpg" alt="Healthy Salad">
+                </div>
+                <div class="item-details">
+                    <h3 class="item-title">Healthy Salad</h3>
+                    <p class="item-description">A vibrant mix of fresh greens, colorful vegetables, and a tangy
+                        vinaigrette.</p>
+                    <span class="price">$9.99</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="salads">
+                <div class="item-image">
+                    <img src="Quinoa Salad 2.jpg" alt="Quinoa Salad">
+                </div>
+                <div class="item-details">
+                    <h3 class="item-title">Quinoa Salad</h3>
+                    <p class="item-description">A protein-packed salad with quinoa, chickpeas, and fresh vegetables.</p>
+                    <span class="price">$10.99</span>
+                </div>
+            </div>
+
+            <!-- Smoothies -->
+            <div class="menu-item" data-category="smoothies">
+                <div class="item-image">
+                    <img src="Nutritional  Smoothie.jpg" alt="Nutritional Smoothie">
+                </div>
+                <div class="item-details">
+                    <h3 class="item-title">Nutritional Smoothie</h3>
+                    <p class="item-description">A refreshing blend of fruits and vegetables, bursting with vitamins and
+                        minerals.</p>
+                    <span class="price">$6.99</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="smoothies">
+                <div class="item-image">
+                    <img src="Green Smoothie.jpg" alt="Green Smoothie">
+                </div>
+                <div class="item-details">
+                    <h3 class="item-title">Green Smoothie</h3>
+                    <p class="item-description">A revitalizing smoothie made with spinach, kale, and tropical fruits.
+                    </p>
+                    <span class="price">$7.49</span>
+                </div>
+            </div>
+
+            <!-- Wraps -->
+            <div class="menu-item" data-category="wraps">
+                <div class="item-image">
+                    <img src="Protein Wrap 01.jpg" alt="Protein Wrap">
+                </div>
+                <div class="item-details">
+                    <h3 class="item-title">Protein Wrap</h3>
+                    <p class="item-description">A wholesome wrap filled with lean protein, fresh vegetables, and whole
+                        grains.</p>
+                    <span class="price">$8.99</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="wraps">
+                <div class="item-image">
+                    <img src="Veggie wrap 1.jpg" alt="Veggie Wrap">
+                </div>
+                <div class="item-details">
+                    <h3 class="item-title">Veggie Wrap</h3>
+                    <p class="item-description">A delicious wrap with grilled vegetables, hummus, and avocado.</p>
+                    <span class="price">$7.99</span>
+                </div>
+            </div>
+
+            <!-- Bowls -->
+            <div class="menu-item" data-category="bowls">
+                <div class="item-image">
+                    <img src="Superfood bowl 001.jpg" alt="Superfood Bowl">
+                </div>
+                <div class="item-details">
+                    <h3 class="item-title">Superfood Bowl</h3>
+                    <p class="item-description">A nutritious bowl with quinoa, kale, and an array of superfood toppings.
+                    </p>
+                    <span class="price">$10.99</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="bowls">
+                <div class="item-image">
+                    <img src="Buddha Bowl 04.jpg" alt="Buddha Bowl">
+                </div>
+                <div class="item-details">
+                    <h3 class="item-title">Buddha Bowl</h3>
+                    <p class="item-description">A balanced bowl with roasted veggies, brown rice, and tahini dressing.
+                    </p>
+                    <span class="price">$11.49</span>
+                </div>
+            </div>
+
+            <!-- Desserts -->
+            <div class="menu-item" data-category="desserts">
+                <div class="item-image">
+                    <img src="Chia Pudding.jpg" alt="Chia Pudding">
+                </div>
+                <div class="item-details">
+                    <h3 class="item-title">Chia Pudding</h3>
+                    <p class="item-description">A creamy chia seed pudding with coconut milk and fresh berries.</p>
+                    <span class="price">$5.99</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="desserts">
+                <div class="item-image">
+                    <img src="Avocado Chocolate Pudding.jpg" alt="Avocado Chocolate Mousse">
+                </div>
+                <div class="item-details">
+                    <h3 class="item-title">Avocado Chocolate Mousse</h3>
+                    <p class="item-description">A rich and creamy mousse made with avocado and dark chocolate.</p>
+                    <span class="price">$6.49</span>
+                </div>
+            </div>
+
+            <!-- Drinks -->
+            <div class="menu-item" data-category="drinks">
+                <div class="item-image">
+                    <img src="Detox Water.jpg" alt="Detox Water">
+                </div>
+                <div class="item-details">
+                    <h3 class="item-title">Detox Water</h3>
+                    <p class="item-description">Infused water with lemon, cucumber, and mint for a refreshing detox.</p>
+                    <span class="price">$3.99</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="drinks">
+                <div class="item-image">
+                    <img src="Herbal Tea.jpg" alt="Herbal Tea">
+                </div>
+                <div class="item-details">
+                    <h3 class="item-title">Herbal Tea</h3>
+                    <p class="item-description">A soothing blend of herbal tea with calming and rejuvenating properties.
+                    </p>
+                    <span class="price">$2.99</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Customizable Meal Kits Section -->
+    <section id="custom-meal-kits">
+        <h2>Customizable Meal Kits</h2>
+        <p>Create your perfect meal kit with a selection of fresh ingredients. Mix and match to suit your tastes and
+            dietary needs.</p>
+
+        <div id="meal-kits-container">
+            <div class="meal-kit-selector">
+                <h3>Build Your Meal Kit</h3>
+                <form id="meal-kit-form">
+                    <div class="selector-group">
+                        <label for="protein">Choose Your Protein:</label>
+                        <select id="protein" name="protein">
+                            <option value="chicken">Grilled Chicken</option>
+                            <option value="tofu">Tofu</option>
+                            <option value="beef">Beef</option>
+                        </select>
+                    </div>
+
+                    <div class="selector-group">
+                        <label for="vegetables">Select Your Vegetables:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="vegetables" value="broccoli"> Broccoli</label>
+                            <label><input type="checkbox" name="vegetables" value="carrots"> Carrots</label>
+                            <label><input type="checkbox" name="vegetables" value="spinach"> Spinach</label>
+                        </div>
+                    </div>
+
+                    <div class="selector-group">
+                        <label for="grain">Pick a Grain:</label>
+                        <select id="grain" name="grain">
+                            <option value="quinoa">Quinoa</option>
+                            <option value="brown-rice">Brown Rice</option>
+                            <option value="barley">Barley</option>
+                        </select>
+                    </div>
+
+                    <div class="selector-group">
+                        <label for="sauce">Choose a Sauce:</label>
+                        <select id="sauce" name="sauce">
+                            <option value="soy">Soy Sauce</option>
+                            <option value="vinaigrette">Vinaigrette</option>
+                            <option value="bbq">BBQ Sauce</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Create My Meal Kit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Customer Reservations Section -->
+    <section id="reservations" class="reservations-section">
+        <h2>Book Your Table</h2>
+        <p>Reserve your spot at NutriEats and indulge in a healthy and delicious dining experience. Choose your
+            preferred date and time, and we'll ensure everything is set for your visit.</p>
+        <form id="reservation-form" class="reservation-form">
+            <div class="form-group">
+                <label for="reservation-date">Select Date:</label>
+                <input type="date" id="reservation-date" name="reservation-date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="reservation-time">Select Time:</label>
+                <input type="time" id="reservation-time" name="reservation-time" required>
+            </div>
+
+            <div class="form-group">
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" name="guests" min="1" max="20" required>
+            </div>
+
+            <div class="form-group">
+                <label for="special-requests">Special Requests:</label>
+                <textarea id="special-requests" name="special-requests" rows="4"
+                    placeholder="Tell us about any special requests (e.g., dietary restrictions)."></textarea>
+            </div>
+
+            <button type="submit" class="reservation-button">Reserve Now</button>
+        </form>
+
+        <div id="confirmation-message" class="confirmation-message hidden">
+            <p>Thank you for your reservation! We look forward to welcoming you at NutriEats.</p>
+            <p class="cta">Need to make changes? <a href="#contact" class="contact-link">Contact us</a></p>
+        </div>
+    </section>
+
+
+
+
+    <!-- Loyalty Program Section -->
+    <section id="loyalty-program">
+        <h2>Join Our Loyalty Program</h2>
+        <p>Become a member of NutriEats' Loyalty Program and enjoy exclusive rewards, discounts, and special offers
+            every time you dine with us or purchase our meal kits. It’s our way of saying thank you for your continued
+            support!</p>
+
+        <div class="loyalty-info">
+            <!-- Loyalty Program Benefits -->
+            <div class="loyalty-benefits">
+                <h3>Program Benefits</h3>
+                <ul>
+                    <li><i class="fas fa-star"></i> Earn points with every purchase</li>
+                    <li><i class="fas fa-gift"></i> Redeem points for discounts and rewards</li>
+                    <li><i class="fas fa-calendar-check"></i> Access exclusive offers and promotions</li>
+                    <li><i class="fas fa-trophy"></i> Enjoy special birthday rewards</li>
+                </ul>
+            </div>
+
+            <!-- How It Works -->
+            <div class="loyalty-how-it-works">
+                <h3>How It Works</h3>
+                <ol>
+                    <li><i class="fas fa-shopping-cart"></i> Sign up for free and start earning points with your first
+                        purchase.</li>
+                    <li><i class="fas fa-credit-card"></i> Earn 1 point for every $1 spent on our menu and meal kits.
+                    </li>
+                    <li><i class="fas fa-gift"></i> Redeem points for discounts on future purchases or for special
+                        rewards.</li>
+                    <li><i class="fas fa-star-half-alt"></i> Track your points and rewards through our user-friendly app
+                        or website.</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Sign Up Button -->
+        <div class="loyalty-sign-up">
+            <a href="sign-up.html" class="sign-up-button">Sign Up Now</a>
+        </div>
+    </section>
+
+
+    <!-- Our Blog Section -->
+    <section id="blog">
+        <h2>Our Latest Blog Posts</h2>
+        <p>Stay updated with the latest trends, tips, and recipes from NutriEats. Explore our blog to learn more about
+            healthy eating and living.</p>
+
+        <div class="blog-container">
+            <!-- Blog Post 1 -->
+            <div class="blog-post">
+                <img src="Healthy Eating Tips.jpg" alt="Healthy Eating Tips">
+                <div class="blog-content">
+                    <h3>10 Tips for Healthy Eating</h3>
+                    <p>Discover simple yet effective tips to improve your diet and overall well-being...</p>
+                    <a href="blog/tips-for-healthy-eating" class="read-more">Read More</a>
+                </div>
+            </div>
+
+            <!-- Blog Post 2 -->
+            <div class="blog-post">
+                <img src="Nutritious Recipes.jpg" alt="Nutritious Recipes">
+                <div class="blog-content">
+                    <h3>5 Nutritious Recipes You Can Make at Home</h3>
+                    <p>Try these easy-to-make recipes that are both delicious and packed with nutrients...</p>
+                    <a href="blog/nutritious-recipes" class="read-more">Read More</a>
+                </div>
+            </div>
+
+            <!-- Blog Post 3 -->
+            <div class="blog-post">
+                <img src="balanced diet benfit.jpg" alt="Benefits of a Balanced Diet">
+                <div class="blog-content">
+                    <h3>The Benefits of a Balanced Diet</h3>
+                    <p>Learn how a balanced diet can improve your health and help you maintain a health
+                    </p>
+                    <a href="blog/balanced-diet-benefits" class="read-more">Read More</a>
+                </div>
+            </div>
+
+            <!-- Add more blog posts as needed -->
+        </div>
+
+        <div class="blog-categories">
+            <h4>Categories:</h4>
+            <ul>
+                <li><a href="blog/category/healthy-eating">Healthy Eating</a></li>
+                <li><a href="blog/category/recipes">Recipes</a></li>
+                <li><a href="blog/category/wellness">Wellness</a></li>
+                <li><a href="blog/category/nutrition">Nutrition</a></li>
+            </ul>
+        </div>
+    </section>
+
+
+
+
+    <!-- AR Previews Section -->
+    <section id="ar-previews">
+        <h2>Experience Our Dishes in Augmented Reality</h2>
+        <p>Get a closer look at our delicious, healthy meals with our AR previews. Simply scan the QR code or click the
+            link below to view each dish in stunning detail right in your own space.</p>
+
+        <div class="ar-previews-container">
+            <!-- AR Preview 1 -->
+            <div class="ar-preview-item">
+                <h4>Grilled Salmon with Quinoa</h4>
+                <img src="salmon quinoa.jpg" alt="Grilled Salmon with Quinoa">
+                <a href="salmon quinoa.jpg" target="_blank" class="ar-button">View in AR</a>
+            </div>
+
+            <!-- AR Preview 2 -->
+            <div class="ar-preview-item">
+                <h4>Avocado & Kale Salad</h4>
+                <img src="Avocado & Kale Salad.jpg" alt="Avocado & Kale Salad">
+                <a href="Avocado & Kale Salad.jpg" target="_blank" class="ar-button">View in AR</a>
+            </div>
+
+            <!-- AR Preview 3 -->
+            <div class="ar-preview-item">
+                <h4>Berry Smoothie Bowl</h4>
+                <img src="berry smoothie bowl....jpg" alt="Berry Smoothie Bowl">
+                <a href="berry smoothie bowl....jpg" target="_blank" class="ar-button">View in AR</a>
+            </div>
+
+            <!-- Add more AR previews as needed -->
+        </div>
+
+
+    </section>
+
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews">
+        <h2>What Our Customers Say</h2>
+
+        <!-- Reviews Carousel -->
+        <div class="reviews-carousel">
+            <!-- Review 1 -->
+            <div class="review-item">
+                <div class="review-text">
+                    <p>"NutriEats has completely transformed the way I think about healthy eating. The meals are
+                        delicious, fresh, and nutritious. Highly recommend!"</p>
+                </div>
+                <div class="reviewer-info">
+                    <img src="https://i.pravatar.cc/300?img=12" alt="Customer 1">
+                    <h4>Jane Doe</h4>
+                    <div class="star-rating">
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9734;</span> <!-- 4 out of 5 stars -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="review-item">
+                <div class="review-text">
+                    <p>"The customizable meal kits are a game changer. I love being able to pick and choose exactly what
+                        I want in my meals. NutriEats is a lifesaver!"</p>
+                </div>
+                <div class="reviewer-info">
+                    <img src="https://i.pravatar.cc/300?img=3" alt="Customer 2">
+                    <h4>John Smith</h4>
+                    <div class="star-rating">
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span> <!-- 5 out of 5 stars -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="review-item">
+                <div class="review-text">
+                    <p>"NutriEats is my go-to spot for healthy and delicious meals! The customizable meal kits are a
+                        game-changer, and the fresh ingredients make all the difference."</p>
+                </div>
+                <div class="reviewer-info">
+                    <img src="https://i.pravatar.cc/300?img=52" alt="Customer 3">
+                    <h4>James Braun</h4>
+                    <div class="star-rating">
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9734;</span> <!-- 4 out of 5 stars -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 4 -->
+            <div class="review-item">
+                <div class="review-text">
+                    <p>"The service is top-notch, and the food is always fresh. NutriEats has become my go-to spot for
+                        healthy dining options."</p>
+                </div>
+                <div class="reviewer-info">
+                    <img src="https://i.pravatar.cc/300?img=16" alt="Customer 4">
+                    <h4>Emily Johnson</h4>
+                    <div class="star-rating">
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9734;</span> <!-- 4 out of 5 stars -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more reviews as needed -->
+        </div>
+
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>We're here to help! Reach out to us for any inquiries, feedback, or reservations.</p>
+
+        <!-- Contact Details -->
+        <div class="contact-details">
+            <p><strong>Address:</strong> 123 Healthy Way, Wellness City, NutriLand</p>
+            <p><strong>Phone:</strong> +1 234 567 890</p>
+            <p><strong>Email:</strong> <a href="mailto:info@nutrieats.com">info@nutrieats.com</a></p>
+        </div>
+
+        <!-- Google Maps Embed -->
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0854403228266!2d144.95592591531766!3d-37.812499879751634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d7f83d4235f4!2sNutriEats!5e0!3m2!1sen!2sau!4v1693158665875!5m2!1sen!2sau"
+                width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
+        </div>
+
+        <!-- Contact Form -->
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer>
+
+        <div class="footer-container">
+            <!-- Quick Links -->
+            <div class="footer-section quick-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Media -->
+            <div class="footer-section social-media">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="footer-section contact-info">
+                <h4>Contact Info</h4>
+                <p><strong>Address:</strong> 123 Healthy Way, Wellness City, NutriLand</p>
+                <p><strong>Phone:</strong> +1 234 567 890</p>
+                <p><strong>Email:</strong> <a href="mailto:info@nutrieats.com">info@nutrieats.com</a></p>
+            </div>
+
+            <!-- Newsletter Subscription -->
+            <div class="section newsletter">
+                <h3>Subscribe to Our Newsletter</h3>
+                <form>
+                    <input type="email" placeholder="Your Email">
+                    <input type="submit" value="Subscribe">
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 NutriEats. All Rights Reserved.</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+
+
+        <!-- Add this in the navbar or footer -->
+        <select id="language-select">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <!-- Add more languages -->
+        </select>
+
+    </footer>
+
+    <!-- Live Chat Support -->
+    <div id="live-chat">
+        <!-- Add live chat widget here -->
+    </div>
+
+    <!-- JavaScript for interactive features -->
+    <script src="script.js"></script>
+
+
+
+</body>
+
+</html>
